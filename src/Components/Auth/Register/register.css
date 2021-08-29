@@ -1,0 +1,24 @@
+body{
+  margin-bottom: 20px;
+}
+
+.formDiv{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.register{
+  width: 20%;
+  
+}
+
+.submit{
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.login{
+  margin-right: 15px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+.accTitle{
+  font-size: 30px;
+  text-align: center;
+}
+
+.pinTable{
+  width: 30%;
+  margin-left: 10px;
+}
+
+.patchTable{
+  width: 30%;
+  margin-left: calc(100% - 69%);
+  /* margin-top: calc(100% - 100%); */
+}
+
+.tables{
+  display: flex;
+  flex-direction: row;
+}
+
+.patchHead{
+text-align: center;
+font-size: 25px;
+}
+
+.pinHead{
+text-align: center;
+font-size: 25px;
+}

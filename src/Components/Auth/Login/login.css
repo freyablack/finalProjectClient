@@ -1,0 +1,17 @@
+.formDiv{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.login{
+  width: 20%;
+}
+
+.submit{
+  margin-right: 15px;
+}
+
+.register{
+  margin-right: 15px;
+}
