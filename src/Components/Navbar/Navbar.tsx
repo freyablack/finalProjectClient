@@ -22,7 +22,6 @@ export default class Navigation extends Component<any, any> {
       <div className="mainDiv">
       <Navbar className='nav' expand="lg">
   <Container>
-    <Router>
     <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
@@ -32,11 +31,10 @@ export default class Navigation extends Component<any, any> {
         <Nav.Link as={Link} to='/patches'>Patches</Nav.Link>
       </Nav>
       <NavDropdown title={localStorage.getItem('username')}>
-        <NavDropdown.Item>Account</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to='/account'>Account</NavDropdown.Item>
         <NavDropdown.Item onClick={() => localStorage.clear()}>Logout</NavDropdown.Item>
       </NavDropdown>
     </Navbar.Collapse>
-      </Router>
   </Container>
 </Navbar>
 <Switch>

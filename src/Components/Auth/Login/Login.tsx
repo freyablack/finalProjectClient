@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './login.css'
 
 
@@ -67,7 +68,7 @@ export default class Login extends React.Component<any, any> {
     </Button>
     <br />
     <p>Not a member yet?</p>
-    <Button className='register'>Register</Button>
+    <Link className='registerLink' to='/register'>Register</Link>
   </Form>
   </div>
         </div>

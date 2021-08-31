@@ -6,6 +6,7 @@ body{
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: -10px;
 }
 
 .register{
@@ -21,4 +22,11 @@ body{
 .login{
   margin-right: 15px;
   margin-bottom: 20px;
+  width: 100px;
+}
+
+.loginLink{
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: none;
 }
