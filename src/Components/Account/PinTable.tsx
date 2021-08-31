@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap'
 import './pinTable.css'
 import Account from './Account'
 import EditPins from './Edit/EditPins'
+import APIURL from '../../helpers/environment'
 
 // change pin table to class component, create the types of my props and state, then create methods to show and hide modal, then create method to select which pin is being edited
 
@@ -90,7 +91,7 @@ const PinTable = (props: any) => {
   const DeletePins = (props:any) => {
     const sessionToken = localStorage.getItem('sessionToken')
     
-    fetch(`http://localhost:4000/pin/delete/${props.id}`, {
+    fetch(`${APIURL}/pin/delete/${props.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',
@@ -105,7 +106,7 @@ const PinTable = (props: any) => {
   // const EditPins = (props:any) => {
   //   const sessionToken = localStorage.getItem('sessionToken')
 
-  //   fetch(`http://localhost:4000/pin/edit/${props.id}`, {
+  //   fetch(`${APIURL}/pin/edit/${props.id}`, {
   //     method: 'PUT',
   //     body: JSON.stringify({
   //       pin: {

@@ -1,6 +1,7 @@
 import React from 'react'
 import './addpin.css'
 import { Form, Row, Col, Button } from 'react-bootstrap'
+import APIURL from '../../helpers/environment'
 
 type pinSet = {
   pinName: string,
@@ -39,7 +40,7 @@ export default class AddPin extends React.Component<{}, pinSet> {
 
   handleSubmit = (e: any) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/pin/add`, {
+    fetch(`${APIURL}/pin/add`, {
       method: 'POST',
       body: JSON.stringify({
         pin: {

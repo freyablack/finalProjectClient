@@ -2,6 +2,7 @@ import React from 'react'
 import { Table } from 'react-bootstrap'
 import './patchTable.css'
 import Account from './Account'
+import APIURL from '../../helpers/environment'
 
 
 
@@ -10,7 +11,7 @@ const PatchTable = ({ patches }: {patches: any}) => {
   const DeletePatches = (props:any) => {
     const sessionToken = localStorage.getItem('sessionToken')
     
-    fetch(`http://localhost:4000/patch/delete/${props.id}`, {
+    fetch(`${APIURL}/patch/delete/${props.id}`, {
       method: 'DELETE',
       headers: new Headers({
         'Content-Type': 'application/json',

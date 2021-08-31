@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './login.css'
+import APIURL from '../../../helpers/environment'
 
 
 interface LoginState{
@@ -23,7 +24,7 @@ export default class Login extends React.Component<any, any> {
 
     handleSubmit = (e: any) => {
       e.preventDefault();
-      fetch(`http://localhost:4000/user/login`, {
+      fetch(`${APIURL}/user/login`, {
         method: 'POST',
         body: JSON.stringify({
           user: {
@@ -95,7 +96,7 @@ export default class Login extends React.Component<any, any> {
 
 //   let handleSubmit = (e: any) => {
 //     e.preventDefault();
-//     fetch(`http://localhost:4000/user/login`, {
+//     fetch(`${APIURL}/user/login`, {
 //       method: 'Post',
 //       body: JSON.stringify({
 //         user: {
