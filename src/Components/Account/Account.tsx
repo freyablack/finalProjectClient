@@ -2,6 +2,7 @@ import React from 'react'
 import PinTable from './PinTable'
 import './account.css'
 import PatchTable from './PatchTable'
+import APIURL from '../../helpers/environment'
 
 
 
@@ -18,14 +19,14 @@ export default class Account extends React.Component<any, any> {
 
   componentDidMount() {
     Promise.all([
-      fetch(`http://localhost:4000/pin/${this.state.username}`, {
+      fetch(`${APIURL}/pin/${this.state.username}`, {
         method: 'GET',
         headers: new Headers({
           'Content-Type': 'application/json',
           'Authorization': this.state.sessionToken
         })
       }),
-      fetch(`http://localhost:4000/patch/${this.state.username}`, {
+      fetch(`${APIURL}/patch/${this.state.username}`, {
         method: 'GET',
         headers: new Headers({
           'Content-Type': 'application/json',
@@ -135,7 +136,7 @@ export default class Account extends React.Component<any, any> {
 
 //   const FetchPins = (props: any) => {
 //     const [sessionToken, setSessionToken] = useState('')
-//     fetch(`http://localhost:4000/pin/${localStorage.getItem('username')}`, {
+//     fetch(`${APIURL}/pin/${localStorage.getItem('username')}`, {
 //       method: "GET",
 //       headers: new Headers({
 //         "Content-Type": "application/json",

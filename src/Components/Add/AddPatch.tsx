@@ -1,5 +1,6 @@
 import React from 'react'
 import './addpatch.css'
+import APIURL from '../../helpers/environment'
 import { Form, Row, Col, Button } from 'react-bootstrap'
 
 type patchSet = {
@@ -31,7 +32,7 @@ export default class AddPatch extends React.Component<{}, patchSet> {
 
   handleSubmit = (e: any) => {
     e.preventDefault();
-    fetch(`http://localhost:4000/patch/add`, {
+    fetch(`${APIURL}/patch/add`, {
       method: 'POST',
       body: JSON.stringify({
         patch: {

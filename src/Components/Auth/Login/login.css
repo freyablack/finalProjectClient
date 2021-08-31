@@ -14,4 +14,9 @@
 
 .register{
   margin-right: 15px;
+  width: auto;
+}
+
+.registerLink{
+  text-decoration: none;
 }
